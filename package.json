@@ -1,0 +1,16 @@
+{
+  "name": "hi-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "pb": "parcel ./index.html",
+    "dev": "nodemon --watch src/ -e ts --exec ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "parcel-bundler": "^1.12.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
+}
