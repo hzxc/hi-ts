@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+        "${workspaceFolder}/lib/**/*.js",
+        "<node_internals>/**"
+      ],
+      "runtimeExecutable": "ts-node",
+      // "runtimeArgs": ["--loader", "ts-node/esm"],
+      "program": "${workspaceFolder}/${file}",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}
