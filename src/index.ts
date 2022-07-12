@@ -1,4 +1,14 @@
-console.log("index");
+import { GrpcWebFetchTransport } from '@protobuf-ts/grpcweb-transport';
+// import { PingPongServiceClient } from './gen/api/node/pingpong/v1/pingpong.client';
+import { PingPongServiceClient } from './gen/node/api/pingpong/v1/pingpong.client';
 
-const count: number = 23;
-console.log("count:", count);
+const client = new PingPongServiceClient(
+  new GrpcWebFetchTransport({
+    baseUrl: 'https://tmpl-go-vercel.vercel.app',
+    format: 'text',
+  })
+);
+const call = client.pingPong({ ping: 'ping' }, {});
+call.response.then((resp) => {
+  console.log(resp.pong);
+});
