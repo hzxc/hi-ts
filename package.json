@@ -16,6 +16,7 @@
   "dependencies": {
     "@protobuf-ts/grpcweb-transport": "^2.7.0",
     "@protobuf-ts/runtime": "^2.7.0",
-    "@protobuf-ts/runtime-rpc": "^2.7.0"
+    "@protobuf-ts/runtime-rpc": "^2.7.0",
+    "dayjs": "^1.11.3"
   }
 }
