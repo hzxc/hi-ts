@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "pb": "parcel ./index.html",
+    "p": "parcel ./index.html",
     "nm": "nodemon --watch src/ -e ts --exec ts-node ./src/index.ts"
   },
   "devDependencies": {
