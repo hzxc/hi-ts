@@ -1,44 +1,42 @@
 import { GrpcWebFetchTransport } from '@protobuf-ts/grpcweb-transport';
-// import { PingPongServiceClient } from './gen/api/node/pingpong/v1/pingpong.client';
-import { HelloServiceClient } from './gen/node/api/hello/v1/hello.client';
-import { StatusServiceClient } from './gen/node/api/healthcheck/v1/healthcheck.client';
+import { UnaryCall } from '@protobuf-ts/runtime-rpc';
+import { HelloService } from './gen/node/api/hello/v1/hello';
 const trans = new GrpcWebFetchTransport({
   // baseUrl: 'https://tmpl-go-vercel.vercel.app',
   baseUrl: 'http://localhost:3000',
-  format: 'text',
+  // format: 'text',
 });
 
-const helloClient = new HelloServiceClient(trans);
-const hello = helloClient.intro({ name: 'foo' }, {});
+const method = HelloService.methods[0];
+const options = trans.mergeOptions(HelloService.options);
 
-// hello.status
-//   .then((resp) => {
-//     console.log('code', resp.code);
-//     console.log('detail', resp.detail);
+const unary = trans.unary(method, { name: 'foo' }, options);
+// let {response} = await unary.request
+// console.log("got a small hat! " + response)
+
+// unary.status
+//   .then((v) => {
+//     console.log(v);
 //   })
-//   .catch((err) => {
-//     console.log(err);
+//   .catch((e) => {
+//     console.log(e);
 //   });
 
-hello.response
-  .then(
-    (resp) => {
-      console.log('resp', resp.intro);
-    }
-    // (rej) => {
-    //   console.log('rej', rej);
-    // }
-  )
-  .catch((err) => {
-    console.log('catch', err);
-  });
+// unary.then(
+//   (value) => {
+//     console.log(value);
+//   },
+//   (rej) => {
+//     console.log(rej);
+//     console.log('status', unary.status);
+//   }
+// );
 
-// const healthcheckClient = new StatusServiceClient(trans);
-// const status = healthcheckClient.status({}, {});
-// status.response
+// console.log('unary.headers', unary.headers);
+// unary.status
 //   .then((resp) => {
-//     console.log(resp.version);
+//     console.log('index', resp);
 //   })
-//   .catch((err) => {
-//     console.log(err);
+//   .catch((reason) => {
+//     console.log('index', reason);
 //   });
