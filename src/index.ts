@@ -1,6 +1,6 @@
 import { GrpcWebFetchTransport } from '@protobuf-ts/grpcweb-transport';
 import { UnaryCall } from '@protobuf-ts/runtime-rpc';
-import { HelloService } from './gen/node/api/hello/v1/hello';
+import { HelloService } from './gen/ts/api/hello/v1/hello';
 const trans = new GrpcWebFetchTransport({
   // baseUrl: 'https://tmpl-go-vercel.vercel.app',
   baseUrl: 'http://localhost:3000',
@@ -11,6 +11,8 @@ const method = HelloService.methods[0];
 const options = trans.mergeOptions(HelloService.options);
 
 const unary = trans.unary(method, { name: 'foo' }, options);
+// console.log(unary.requestHeaders);
+
 // let {response} = await unary.request
 // console.log("got a small hat! " + response)
 

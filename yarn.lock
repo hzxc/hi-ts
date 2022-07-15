@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@abraham/reflection@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@abraham/reflection/-/reflection-0.10.0.tgz#0028ab6b36f760f3ec9e90a4960bbe5766766a51"
+  integrity sha512-ltEjxbZn3B5CzPhUND30YJiondgOTH3m52edgshMxcuHTEjO2lRyL+EoO7H11yYzt1FIS5CfnMcACSP52WKrLA==
+
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
@@ -5547,6 +5552,19 @@ ts-protoc-gen@^0.15.0:
   dependencies:
     google-protobuf "^3.15.5"
 
+tst-reflect-transformer@^0.9.10:
+  version "0.9.10"
+  resolved "https://registry.yarnpkg.com/tst-reflect-transformer/-/tst-reflect-transformer-0.9.10.tgz#2a51c23798306a7dd744d2b66419283288a47438"
+  integrity sha512-gTXtDyVvF2S8aMUCYaezRHgBu0mj6d7R6dhW9kbZ4XsXOERyRuoDgtjoIOIyeuokPQfYL/HMQANaL3Cm7bY/nA==
+  dependencies:
+    tst-reflect "^0.7.0"
+    typescript "^4.0.0"
+
+tst-reflect@^0.7.0, tst-reflect@^0.7.6:
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/tst-reflect/-/tst-reflect-0.7.6.tgz#6f43a35e7ca126f2580702aba298c1f95d636df0"
+  integrity sha512-HWUH+0oPe9mijIlEyqvnFbMfL0SKT9SLYteb3+deVnUj7LXeY65JQi5uWErTjErjXBRkkdDDuwRrqBtncY7uNg==
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -5576,7 +5594,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^4.7.4:
+typescript@^4.0.0, typescript@^4.7.4:
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==

@@ -1,25 +1,55 @@
 import { GrpcWebFetchTransport } from '@protobuf-ts/grpcweb-transport';
+import { RpcError } from '@protobuf-ts/runtime-rpc';
 // import { PingPongServiceClient } from './gen/api/node/pingpong/v1/pingpong.client';
-import { HelloServiceClient } from './gen/node/api/hello/v1/hello.client';
-import { StatusServiceClient } from './gen/node/api/healthcheck/v1/healthcheck.client';
-import { IntroRequest, IntroResponse } from './gen/node/api/hello/v1/hello';
+import { HelloServiceClient, StatusServiceClient } from './client';
 const trans = new GrpcWebFetchTransport({
   // baseUrl: 'https://tmpl-go-vercel.vercel.app',
   baseUrl: 'http://localhost:3000',
   // format: 'text',
 });
 
-const client = new HelloServiceClient(trans);
+const hc = new HelloServiceClient(trans);
+const sc = new StatusServiceClient(trans);
 
-client.intro({ name: 'foo' }, {}).then(
+hc.intro({ name: 'foo' }, {}).then(
   (resp) => {
-    console.log(resp);
-    console.log(resp.status.code);
+    console.log('response:', JSON.stringify(resp.response));
+    console.log('status code:', resp.status.code);
   },
   (err) => {
-    console.log('err', err?.code);
+    console.log('error code:', err?.code);
+    console.log('error message', err?.message);
   }
 );
+
+hc.me({ name: 'foo' }, {}).then(
+  (resp) => {
+    console.log('response:', resp.response);
+    console.log('status code:', resp.status.code);
+  },
+  (err) => {
+    console.log('error code:', err?.code);
+    console.log('error message', err?.message);
+  }
+);
+
+// const me = hc.call
+// me.({}).then(
+
+// )
+
+// sc.status({ name: 'foo' }, {}).then(
+//   (resp) => {
+//     console.log('status', typeof resp.response);
+//     console.log('status', resp.response);
+//     console.log('status', resp.status.code);
+//   },
+//   (err) => {
+//     console.log('status err', err?.code);
+//     console.log(typeof err);
+//     console.log(err);
+//   }
+// );
 // hello
 //   .then(
 //     (response) => {

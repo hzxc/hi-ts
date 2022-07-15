@@ -1,6 +1,5 @@
-console.log("foo");
+let err: any;
 
-const count: number = 23;
-console.log("count:", count);
-
-export {};
+if (err?.hello == undefined) {
+  console.log(err?.hello);
+}
