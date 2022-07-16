@@ -5,6 +5,5 @@ protoc \
 --js_out="import_style=commonjs,binary:"./src/gen/node"" \
 --ts_out=""./src/gen/node"" \
 ./protos/hello.proto
- 
 make.exe: Leaving directory 'd:/proj/hzxc.github.com/hi-ts'
  

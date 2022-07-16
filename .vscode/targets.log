@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Jul 15 15:27:51 2022
+# Make data base, printed on Sat Jul 16 15:40:51 2022
 
 # Variables
 
@@ -30,7 +30,8 @@ HOMEDRIVE = C:
 # automatic
 @F = $(notdir $@)
 # automatic
-^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+^D = $(patsubst %/,%,$(patsub 
+st %\,%,$(dir $^)))
 # makefile
 CURDIR := d:/proj/hzxc.github.com/hi-ts
 # default
@@ -45,6 +46,8 @@ ONEDRIVE = C:\Users\Administrator\OneDrive
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 TMP = C:\Users\ADMINI~1\AppData\Local\Temp
 # environment
@@ -74,7 +77,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18948_HKVMEDWKWWIGJLJM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_22756_MAGGCTPVCXUVAQBR
 # environment
 COMPUTERNAME = WO
 # environment
@@ -186,11 +189,13 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 18948
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 22756
 # environment
 USERDOMAIN_ROAMINGPROFILE = WO
 # variable set hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=12/107=11%
+# Load=91/1024=9%, Rehash=0, Collisions=12/109=11%
 
 # Pattern-specific Variable Values
 
@@ -210,11 +215,12 @@ USERDOMAIN_ROAMINGPROFILE = WO
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1656922423): 8 files, no impossibilities.
 # C:\Windows\System32\OpenSSH\: could not be stat'd.
 # D:\cli\curl (key D:/cli/curl, mtime 1645456363): 6 files, no impossibilities.
-# D:\cli\TDM-GCC-64\bin (key D:/cli/TDM-GCC-64/bin, mtime 1655629601): 62 files, no impossibilities.
+# D:\cli\TDM-GCC-64\bin (key D:/cli/TDM-GCC-64/bin, mtime 16 
+55629601): 62 files, no impossibilities.
 # D:\cli\pscale-cli (key D:/cli/pscale-cli, mtime 1655629365): 6 files, no impossibilities.
 # D:\cli\tcping-cli (key D:/cli/tcping-cli, mtime 1655629829): 3 files, no impossibilities.
 # D:\cli\OpenSSL-Win64\bin (key D:/cli/OpenSSL-Win64/bin, mtime 1654787878): 16 files, no impossibilities.
-# C:\Users\Administrator\AppData\Roaming\npm (key C:/Users/Administrator/AppData/Roaming/npm, mtime 1657512705): 45 files, no impossibilities.
+# C:\Users\Administrator\AppData\Roaming\npm (key C:/Users/Administrator/AppData/Roaming/npm, mtime 1657952448): 57 files, no impossibilities.
 # C:\Windows (key C:/Windows, mtime 1657710759): 120 files, no impossibilities.
 # C:\Program Files\Go\bin (key C:/Program Files/Go/bin, mtime 1656922532): 4 files, no impossibilities.
 # C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps (key C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps, mtime 1657333816): 19 files, no impossibilities.
@@ -223,7 +229,7 @@ USERDOMAIN_ROAMINGPROFILE = WO
 # C:\Windows\system32 (key C:/Windows/system32, mtime 1657714260): 2997 files, no impossibilities.
 # C:\Program Files\PowerShell\7\ (key C:/Program Files/PowerShell/7/, mtime 1656922545): 478 files, no impossibilities.
 
-# 4062 files, no impossibilities in 24 directories.
+# 4074 files, no impossibilities in 24 directories.
 
 # Implicit Rules
 
@@ -276,7 +282,10 @@ proto:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	protoc \
-	--plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
+	--plugin="p 
+make.exe: *** No rule to make target 'all'.  Stop.
+
+rotoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
 	--js_out="import_style=commonjs,binary:${OUT_DIR}" \
 	--ts_out="${OUT_DIR}" \
 	./protos/hello.proto
@@ -295,16 +304,14 @@ proto:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 9 (7) / strings = 3969 / storage = 67258 B / avg = 16 B
-# current buf: size = 8174 B / used = 1929 B / count = 119 / avg = 16 B
-# other used: total = 59084 B / count = 3850 / avg = 15 B
+# strcache buffers: 9 (7) / strings = 3981 / storage = 67464 B / avg = 16 B
+# current buf: size = 8174 B / used = 2135 B / count = 131 / avg = 16 B
+# other used: total = 59290 B / count = 3850 / avg = 15 B
 # other free: total = 63 B / max = 20 B / min = 2 B / avg = 7 B
 
-# strcache performance: lookups = 4101 / hit rate = 3%
+# strcache performance: lookups = 4113 / hit rate = 3%
 # hash-table stats:
-# Load=3969/8192=48%, Rehash=0, Collisions=1634/4101=40%
-# Finished Make data base on Fri Jul 15 15:27:51 2022
+# Load=3981/8192=49%, Rehash=0, Collisions=1639/4113=40%
+# Finished Make data base on Sat Jul 16 15:40:51 2022
 
  
-make.exe: *** No rule to make target 'all'.  Stop.
-
