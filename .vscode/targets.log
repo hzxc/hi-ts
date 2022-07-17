@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun Jul 17 12:05:20 2022
+# Make data base, printed on Sun Jul 17 15:23:15 2022
 
 # Variables
 
@@ -47,6 +47,8 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
 TMP = C:\Users\ADMINI~1\AppData\Local\Temp
 # environment
 PROGRAMW6432 = C:\Program Files
@@ -75,7 +77,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9728_CZNNELKLQNCSIDRK
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9996_OUVMFURZXKFPYKRV
 # environment
 COMPUTERNAME = WO
 # environment
@@ -187,11 +189,14 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 9728
+FPS_BROWSER_APP_PROFILE 
+_STRING = Internet Explorer
+# environment
+VSCODE_PID = 9996
 # environment
 USERDOMAIN_ROAMINGPROFILE = WO
 # variable set hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=12/107=11%
+# Load=91/1024=9%, Rehash=0, Collisions=12/109=11%
 
 # Pattern-specific Variable Values
 
@@ -202,8 +207,7 @@ USERDOMAIN_ROAMINGPROFILE = WO
 # C:\ProgramData\DockerDesktop\version-bin: could not be stat'd.
 # D:\cli\protobuf\bin (key D:/cli/protobuf/bin, mtime 1657771758): 7 files, no impossibilities.
 # D:\cli\jq (key D:/cli/jq, mtime 1645578416): 3 files, no impossibilities.
-# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622915553):  
-31 files, no impossibilities.
+# C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622915553): 31 files, no impossibilities.
 # . (key d:/proj/hzxc.github.com/hi-ts, mtime 1657855199): 19 files, no impossibilities.
 # E:\Programs\Microsoft VS Code\bin (key E:/Programs/Microsoft VS Code/bin, mtime 1657679902): 4 files, no impossibilities.
 # D:\cli\etcd-v3.5.4 (key D:/cli/etcd-v3.5.4, mtime 1656780299): 11 files, no impossibilities.
@@ -281,10 +285,7 @@ proto:
 	--plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
 	--js_out="import_style=commonjs,binary:${OUT_DIR}" \
 	--ts_out="${OUT_DIR}" \
-	./pro 
-make.exe: *** No rule to make target 'all'.  Stop.
-
-tos/hello.proto
+	./protos/hello.proto
 
 # Not a target:
 .DEFAULT:
@@ -308,6 +309,8 @@ tos/hello.proto
 # strcache performance: lookups = 4119 / hit rate = 3%
 # hash-table stats:
 # Load=3987/8192=49%, Rehash=0, Collisions=1648/4119=40%
-# Finished Make data base on Sun Jul 17 12:05:20 2022
+# Finished Make data base on Sun Jul 17 15:23:15 2022
 
  
+make.exe: *** No rule to make target 'all'.  Stop.
+

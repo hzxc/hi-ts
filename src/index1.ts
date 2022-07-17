@@ -13,6 +13,7 @@ const sc = new StatusServiceClient(trans);
 
 hc.intro({ name: 'foo' }, {}).then(
   (resp) => {
+    console.log('resp:', resp);
     console.log('response:', JSON.stringify(resp.response));
     console.log('status code:', resp.status.code);
   },
@@ -24,6 +25,7 @@ hc.intro({ name: 'foo' }, {}).then(
 
 hc.me({ name: 'foo' }, {}).then(
   (resp) => {
+    console.log('resp:', resp);
     console.log('response:', resp.response);
     console.log('status code:', resp.status.code);
   },
