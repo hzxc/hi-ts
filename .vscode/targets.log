@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun Jul 17 15:23:15 2022
+# Make data base, printed on Sat Jul 23 09:19:50 2022
 
 # Variables
 
@@ -30,8 +30,7 @@ HOMEDRIVE = C:
 # automatic
 @F = $(notdir $@)
 # automatic
-^D = $(patsubst %/,%,$(patsub 
-st %\,%,$(dir $^)))
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # makefile
 CURDIR := d:/proj/hzxc.github.com/hi-ts
 # default
@@ -77,7 +76,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9996_OUVMFURZXKFPYKRV
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5752_MYSGDDGAUQAQAHXZ
 # environment
 COMPUTERNAME = WO
 # environment
@@ -93,9 +92,9 @@ PUBLIC = C:\Users\Public
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Administrator\AppData\Roaming\Code\CachedData\b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = C:\Users\Administrator\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
@@ -141,7 +140,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
 # environment
 OS = Windows_NT
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\9e7283c68e6159fd1e9872b65f264be5-1.69.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\9e7283c68e6159fd1e9872b65f264be5-1.69.2-main-sock
 # environment
 HOMEPATH = \Users\Administrator
 # environment
@@ -189,10 +188,9 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-FPS_BROWSER_APP_PROFILE 
-_STRING = Internet Explorer
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 9996
+VSCODE_PID = 5752
 # environment
 USERDOMAIN_ROAMINGPROFILE = WO
 # variable set hash-table stats:
@@ -209,7 +207,7 @@ USERDOMAIN_ROAMINGPROFILE = WO
 # D:\cli\jq (key D:/cli/jq, mtime 1645578416): 3 files, no impossibilities.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622915553): 31 files, no impossibilities.
 # . (key d:/proj/hzxc.github.com/hi-ts, mtime 1657855199): 19 files, no impossibilities.
-# E:\Programs\Microsoft VS Code\bin (key E:/Programs/Microsoft VS Code/bin, mtime 1657679902): 4 files, no impossibilities.
+# E:\Programs\Microsoft VS Code\bin (key E:/Programs/Microsoft VS Code/bin, mtime 1658208920): 4 files, no impossibilities.
 # D:\cli\etcd-v3.5.4 (key D:/cli/etcd-v3.5.4, mtime 1656780299): 11 files, no impossibilities.
 # C:\Users\Administrator\go\bin (key C:/Users/Administrator/go/bin, mtime 1657764010): 14 files, no impossibilities.
 # C:\Program Files\Docker\Docker\resources\bin (key C:/Program Files/Docker/Docker/resources/bin, mtime 1656922373): 13 files, no impossibilities.
@@ -220,16 +218,16 @@ USERDOMAIN_ROAMINGPROFILE = WO
 # D:\cli\pscale-cli (key D:/cli/pscale-cli, mtime 1657976471): 6 files, no impossibilities.
 # D:\cli\tcping-cli (key D:/cli/tcping-cli, mtime 1655629829): 3 files, no impossibilities.
 # D:\cli\OpenSSL-Win64\bin (key D:/cli/OpenSSL-Win64/bin, mtime 1654787878): 16 files, no impossibilities.
-# C:\Users\Administrator\AppData\Roaming\npm (key C:/Users/Administrator/AppData/Roaming/npm, mtime 1657969179): 63 files, no impossibilities.
+# C:\Users\Administrator\AppData\Roaming\npm (key C:/Users/Administrator/AppData/Roaming/npm, mtime 1658365997): 66 files, no impossibilities.
 # C:\Windows (key C:/Windows, mtime 1657710759): 120 files, no impossibilities.
 # C:\Program Files\Go\bin (key C:/Program Files/Go/bin, mtime 1656922532): 4 files, no impossibilities.
-# C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps (key C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps, mtime 1657333816): 19 files, no impossibilities.
+# C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps (key C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps, mtime 1658205010): 19 files, no impossibilities.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1656938953): 171 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1657269216): 25 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1657714260): 2997 files, no impossibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1658490188): 2997 files, no impossibilities.
 # C:\Program Files\PowerShell\7\ (key C:/Program Files/PowerShell/7/, mtime 1656922545): 478 files, no impossibilities.
 
-# 4080 files, no impossibilities in 24 directories.
+# 4083 files, no impossibilities in 24 directories.
 
 # Implicit Rules
 
@@ -301,15 +299,15 @@ proto:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 9 (7) / strings = 3987 / storage = 67525 B / avg = 16 B
-# current buf: size = 8174 B / used = 2196 B / count = 137 / avg = 16 B
-# other used: total = 59351 B / count = 3850 / avg = 15 B
+# strcache buffers: 9 (7) / strings = 3990 / storage = 67551 B / avg = 16 B
+# current buf: size = 8174 B / used = 2222 B / count = 140 / avg = 15 B
+# other used: total = 59377 B / count = 3850 / avg = 15 B
 # other free: total = 63 B / max = 20 B / min = 2 B / avg = 7 B
 
-# strcache performance: lookups = 4119 / hit rate = 3%
+# strcache performance: lookups = 4122 / hit rate = 3%
 # hash-table stats:
-# Load=3987/8192=49%, Rehash=0, Collisions=1648/4119=40%
-# Finished Make data base on Sun Jul 17 15:23:15 2022
+# Load=3990/8192=49%, Rehash=0, Collisions=1650/4122=40%
+# Finished Make data base on Sat Jul 23 09:19:50 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.
